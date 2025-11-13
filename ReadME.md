@@ -57,28 +57,12 @@ GET /rate
 }
 ```
 
-#### Root Endpoint
-```
-GET /
-```
-
 Returns API information and available endpoints.
 
 #### API Documentation
 ```
 GET /docs
 ```
-
-## Deployment
-
-### Deploy to Render
-
-1. Push your code to GitHub
-2. Connect your repository to Render
-3. Use these settings:
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `uvicorn main:app --host 0.0.0.0 --port $PORT`
-   - **Python Version:** 3.11+
 
 ## Requirements
 
