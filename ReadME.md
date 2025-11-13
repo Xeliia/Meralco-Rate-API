@@ -63,7 +63,6 @@ Returns API information and available endpoints.
 ```
 GET /docs
 ```
-
 ## Requirements
 
 - Python 3.11+

@@ -85,7 +85,6 @@ async def root():
 
 @app.get("/rate")
 async def get_current_rate():
-    """Fetches and returns the latest Meralco electricity rate."""
     try:
         latest = get_latest_rates_link()
         if not latest:
