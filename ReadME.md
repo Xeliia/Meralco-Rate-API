@@ -1,0 +1,1 @@
+Simple API that scrapes the latest meralco rate
