@@ -4,6 +4,7 @@ import datetime
 import requests
 from bs4 import BeautifulSoup
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 
@@ -11,6 +12,14 @@ app = FastAPI(
     title="Meralco Rate API",
     description="Simple API that scrapes the latest Meralco electricity rate",
     version="1.0.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 app.mount("/assets", StaticFiles(directory="assets"), name="assets")
